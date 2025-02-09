@@ -6,11 +6,14 @@ use bb8_postgres::PostgresConnectionManager;
 use serde::Serialize;
 use tokio_postgres::NoTls;
 
-#[derive(Serialize)]
-struct Content {
-    id: i32,
-    title: String,
-}
+mod content;
+use content::Content;
+
+// #[derive(Serialize)]
+// struct Content {
+//     id: i32,
+//     title: String,
+// }
 
 #[tokio::main]
 async fn main() {
